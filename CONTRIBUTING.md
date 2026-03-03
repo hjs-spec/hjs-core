@@ -1,3 +1,6 @@
+## 📝 `hjs-core/CONTRIBUTING.md`
+
+```markdown
 # Contributing to HJS Core
 
 Thank you for your interest in contributing to **HJS Core**, the Rust reference implementation of the HJS protocol! We welcome contributions from everyone, whether you're fixing a bug, improving documentation, or proposing new features.
@@ -55,39 +58,35 @@ cargo test
 
 # Run the CLI
 cargo run --bin hjs -- --help
-Development Workflow
-Make your changes in a feature branch
+```
 
-Run tests frequently: cargo test
+### Development Workflow
 
-Check formatting: cargo fmt -- --check
+1. **Make your changes** in a feature branch
+2. **Run tests frequently**: `cargo test`
+3. **Check formatting**: `cargo fmt -- --check`
+4. **Run linter**: `cargo clippy -- -D warnings`
+5. **Update documentation** if needed
+6. **Commit with a clear message**
 
-Run linter: cargo clippy -- -D warnings
+## Guidelines
 
-Update documentation if needed
+### Code Style
 
-Commit with a clear message
+- Follow Rust standard style (automatically enforced by `rustfmt`)
+- Use meaningful variable and function names
+- Add comments for non-obvious logic
+- Keep functions focused and small
 
-Guidelines
-Code Style
-Follow Rust standard style (automatically enforced by rustfmt)
+### Testing
 
-Use meaningful variable and function names
+- Write unit tests for new functionality
+- Place tests in the same file as the code, under a `#[cfg(test)]` module
+- Use integration tests in the `tests/` directory for complex scenarios
 
-Add comments for non-obvious logic
+**Example:**
 
-Keep functions focused and small
-
-Testing
-Write unit tests for new functionality
-
-Place tests in the same file as the code, under a #[cfg(test)] module
-
-Use integration tests in the tests/ directory for complex scenarios
-
-Example:
-
-rust
+```rust
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -98,34 +97,33 @@ mod tests {
         assert_eq!(event.entity, "test");
     }
 }
-Commit Messages
-Follow the Conventional Commits specification:
+```
 
-text
+### Commit Messages
+
+Follow the [Conventional Commits](https://www.conventionalcommits.org/) specification:
+
+```
 <type>(<scope>): <description>
 
 [optional body]
 
 [optional footer]
-Types:
+```
 
-feat: New feature
+**Types:**
 
-fix: Bug fix
+- `feat`: New feature
+- `fix`: Bug fix
+- `docs`: Documentation only
+- `style`: Code style changes (formatting, etc.)
+- `refactor`: Code change that neither fixes a bug nor adds a feature
+- `test`: Adding or updating tests
+- `chore`: Maintenance tasks
 
-docs: Documentation only
+**Example:**
 
-style: Code style changes (formatting, etc.)
-
-refactor: Code change that neither fixes a bug nor adds a feature
-
-test: Adding or updating tests
-
-chore: Maintenance tasks
-
-Example:
-
-text
+```
 feat(receipt): add Ed25519 signature support
 
 - Implement signing and verification
@@ -133,19 +131,19 @@ feat(receipt): add Ed25519 signature support
 - Update documentation
 
 Closes #42
-Pull Request Process
-Ensure all tests pass and code is formatted
+```
 
-Update documentation if necessary
+### Pull Request Process
 
-Keep PRs focused on a single change
+1. Ensure all tests pass and code is formatted
+2. Update documentation if necessary
+3. Keep PRs focused on a single change
+4. Respond to review feedback promptly
+5. After approval, a maintainer will merge
 
-Respond to review feedback promptly
+## Project Structure
 
-After approval, a maintainer will merge
-
-Project Structure
-text
+```
 core/
 ├── crates/           # Crate implementations
 ├── src/              # Main source code
@@ -153,34 +151,37 @@ core/
 ├── examples/         # Example usage
 ├── Cargo.toml        # Project manifest
 └── README.md         # This file
-Related Resources
-HJS Protocol Specification
+```
 
-IETF Draft
+## Related Resources
 
-API Reference
+- [HJS Protocol Specification](https://github.com/hjs-protocol/spec)
+- [IETF Draft](https://datatracker.ietf.org/doc/draft-wang-hjs-judgment-event/)
+- [API Reference](https://github.com/hjs-protocol/api)
+- [Rust Documentation](https://doc.rust-lang.org/)
 
-Rust Documentation
+## Recognition
 
-Recognition
 Contributors will be recognized in:
 
-Release notes
+- Release notes
+- Repository README (for significant contributions)
+- Our thanks page
 
-Repository README (for significant contributions)
+## Questions?
 
-Our thanks page
-
-Questions?
 Feel free to:
 
-Open an issue
-
-Start a discussion
-
-Email signal@humanjudgment.org
+- Open an [issue](https://github.com/hjs-protocol/core/issues)
+- Start a [discussion](https://github.com/hjs-protocol/core/discussions)
+- Email [signal@humanjudgment.org](mailto:signal@humanjudgment.org)
 
 Thank you for helping make HJS better!
 
-© 2026 Human Judgment Systems Foundation Ltd.
-This document is licensed under the MIT License.
+---
+
+**© 2026 Human Judgment Systems Foundation Ltd.**  
+This document is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+```
+
+---
