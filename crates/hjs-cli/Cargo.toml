@@ -1,0 +1,20 @@
+[package]
+name = "hjs-cli"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "CLI for HJS Judgment Event Protocol"
+keywords = ["hjs", "cli", "judgment-event"]
+
+[[bin]]
+name = "hjs"
+path = "src/main.rs"
+
+[dependencies]
+hjs-core = { path = "../hjs-core" }
+clap = { version = "4.0", features = ["derive"] }
+tokio = { version = "1.0", features = ["full"] }
+serde_json = "1.0"
+anyhow = "1.0"
