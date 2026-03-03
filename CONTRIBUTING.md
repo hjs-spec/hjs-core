@@ -1,6 +1,3 @@
-## 📝 `hjs-core/CONTRIBUTING.md`
-
-```markdown
 # Contributing to HJS Core
 
 Thank you for your interest in contributing to **HJS Core**, the Rust reference implementation of the HJS protocol! We welcome contributions from everyone, whether you're fixing a bug, improving documentation, or proposing new features.
