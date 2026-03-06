@@ -1,19 +1,19 @@
 [package]
-name = "hjs-cli"
+name = "jep-cli"
 version.workspace = true
 authors.workspace = true
 edition.workspace = true
 license.workspace = true
 repository.workspace = true
-description = "CLI for HJS Judgment Event Protocol"
-keywords = ["hjs", "cli", "judgment-event"]
+description = "CLI for JEP Judgment Event Protocol"
+keywords = ["jep", "cli", "judgment-event"]
 
 [[bin]]
-name = "hjs"
+name = "jep"
 path = "src/main.rs"
 
 [dependencies]
-hjs-core = { path = "../hjs-core" }
+jep-core = { path = "../jep-core" }
 clap = { version = "4.0", features = ["derive"] }
 tokio = { version = "1.0", features = ["full"] }
 serde_json = "1.0"
