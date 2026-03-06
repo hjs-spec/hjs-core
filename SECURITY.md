@@ -21,7 +21,7 @@ We take the security of JEP Core seriously. If you believe you have found a secu
 
 ### How to Report
 
-Please send a detailed report to **[security@humanjudgment.org](mailto:security@humanjudgment.org)**. 
+Please send a detailed report to **[signal@humanjudgment.org](mailto:security@humanjudgment.org)**. 
 
 If you prefer, you can also contact us via our main email at [signal@humanjudgment.org](mailto:signal@humanjudgment.org) with "SECURITY" in the subject line.
 
